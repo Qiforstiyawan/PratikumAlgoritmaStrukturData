@@ -28,5 +28,18 @@ public class DosenDemo27 {
         }
 
         sc.close();
+
+        DataDosen27 data = new DataDosen27();
+
+        System.out.println("\n=== Semua Data Dosen ===");
+        data.dataSemuaDosen(arrayOfDosen27);
+        System.out.println("\n=== Jumlah Dosen per Jenis Kelamin ===");
+        data.jumlahDosenPerJenisKelamin(arrayOfDosen27);
+        System.out.println("\n=== Rata-rata Usia per Jenis Kelamin ===");
+        data.rataUsiaDosenPerJenisKelamin(arrayOfDosen27);
+        System.out.println("\n=== Dosen Paling Tua ===");
+        data.infoDosenPalingTua(arrayOfDosen27);
+        System.out.println("\n=== Dosen Paling Muda ===");
+        data.infoDosenPalingMuda(arrayOfDosen27);
     }
 }
