@@ -44,7 +44,6 @@ public class sistemPeminjaman27 {
             if (listPinjam[mid].mhs.nim.equals(nim)) {
                 listPinjam[mid].tampil();
                 found = true;
-                break;
             }
 
             if (listPinjam[mid].mhs.nim.compareTo(nim) < 0) {
