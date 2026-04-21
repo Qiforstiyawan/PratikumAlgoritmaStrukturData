@@ -14,7 +14,7 @@ public class MahasiswaDemo27 {
             System.out.println("2. Menilai tugas");
             System.out.println("3. Melihat tugas teratas");
             System.out.println("4. Melihat daftar tugas");
-            System.out.print("Pili: ");
+            System.out.print("Pilih: ");
             pilih = scan.nextInt();
             scan.nextLine();
             switch (pilih) {
