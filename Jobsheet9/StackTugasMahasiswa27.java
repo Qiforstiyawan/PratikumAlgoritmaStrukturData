@@ -28,7 +28,7 @@ public class StackTugasMahasiswa27 {
     }
 
     public void push(Mahasiswa27 mhs) {
-        if (isFull()) {
+        if (!isFull()) {
             top++;
             stack[top] = mhs;
         } else {
