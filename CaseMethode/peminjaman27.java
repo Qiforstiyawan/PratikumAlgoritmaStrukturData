@@ -3,6 +3,7 @@ package CaseMethode;
 public class peminjaman27 {
     mahasiswa27 mhs;
     buku27 buku;
+
     int lamaPinjam;
     int terlambat;
     int denda;

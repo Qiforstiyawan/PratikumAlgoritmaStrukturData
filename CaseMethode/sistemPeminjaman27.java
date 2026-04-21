@@ -4,13 +4,22 @@ public class sistemPeminjaman27 {
     peminjaman27[] listPinjam;
     int idx;
 
-    sistemPeminjaman27(int size) {
+    buku27[] listPinjamBuku;
+    int idxBuku;
+
+    sistemPeminjaman27(int size, int sizeBuku) {
         listPinjam = new peminjaman27[size];
+        listPinjamBuku = new buku27[sizeBuku];
     }
 
     void tambah(peminjaman27 p) {
         listPinjam[idx] = p;
         idx++;
+    }
+
+    void tambahBuku(buku27 r) {
+        listPinjamBuku[idxBuku] = r;
+        idxBuku++;
     }
 
     void tampil() {
@@ -19,17 +28,23 @@ public class sistemPeminjaman27 {
         }
     }
 
+    void tampilBuku() {
+        for (int i = 0; i < idxBuku; i++) {
+            listPinjamBuku[i].tampil();
+        }
+    }
+
     void insertionSort() {
-        for (int i = 1; i < idx; i++) {
-            peminjaman27 temp = listPinjam[i];
+        for (int i = 1; i < idxBuku; i++) {
+            buku27 temp = listPinjamBuku[i];
             int j = i - 1;
 
-            while (j >= 0 && listPinjam[j].denda < temp.denda) {
-                listPinjam[j + 1] = listPinjam[j];
+            while (j >= 0 && listPinjamBuku[j].tahunTerbit < temp.tahunTerbit) {
+                listPinjamBuku[j + 1] = listPinjamBuku[j];
                 j--;
             }
 
-            listPinjam[j + 1] = temp;
+            listPinjamBuku[j + 1] = temp;
         }
     }
 

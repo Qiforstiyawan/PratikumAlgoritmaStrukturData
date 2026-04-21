@@ -1,6 +1,7 @@
 package CaseMethode;
 
 public class buku27 {
+    mahasiswa27 mhs;
     String kodeBuku;
     String judul;
     int tahunTerbit;

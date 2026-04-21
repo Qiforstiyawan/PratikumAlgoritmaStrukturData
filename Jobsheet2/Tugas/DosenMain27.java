@@ -4,8 +4,6 @@ public class DosenMain27 {
         Dosen27 d1 = new Dosen27();
         d1.idDosen = "D001";
         d1.nama = "Budi Santoso";
-        d1.statusAktif = true;
-        d1.tahunBergabung = 2015;
         d1.bidangKeahlian = "Pemrograman";
 
         d1.tampilInformasi();
