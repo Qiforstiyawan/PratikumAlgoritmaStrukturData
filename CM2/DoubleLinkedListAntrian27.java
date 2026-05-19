@@ -68,4 +68,31 @@ public class DoubleLinkedListAntrian27 {
 
         return null;
     }
+
+    //Penambahan
+    public void tambahAntrianPrioritas27(String nama, String noHp) {
+        Pembeli27 pembeli = new Pembeli27(nomorOtomatis, nama, noHp);
+        NodePembeli27 baru = new NodePembeli27(pembeli);
+
+        if (head == null) {
+            head = tail = baru;
+        } else if (head.next == null) {
+            head.next = baru;
+            baru.prev = head;
+            tail = baru;
+        } else {
+            NodePembeli27 setelahHead = head.next;
+
+            head.next = baru;
+            baru.prev = head;
+
+            baru.next = setelahHead;
+            setelahHead.prev = baru;
+        }
+
+        System.out.println("Antrian prioritas berhasil ditambahkan di posisi ke-2.");
+        System.out.println("Nomor antrian: " + nomorOtomatis);
+
+        nomorOtomatis++;
+    }
 }

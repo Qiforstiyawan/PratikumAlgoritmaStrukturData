@@ -22,13 +22,17 @@ public class MainRoyalDelish27 {
                 case 1:
                     tambahAntrian27();
                     break;
+                //Penambahan
                 case 2:
-                    antrian.cetakAntrian27();
+                    tambahAntrianPrioritas27();
                     break;
                 case 3:
-                    hapusAntrianDanPesan27();
+                    antrian.cetakAntrian27();
                     break;
                 case 4:
+                    hapusAntrianDanPesan27();
+                    break;
+                case 5:
                     pesanan.cetakLaporan27();
                     break;
                 case 0:
@@ -48,9 +52,10 @@ public class MainRoyalDelish27 {
         System.out.println("    SISTEM ANTRIAN ROYAL DELISH");
         System.out.println("=================================");
         System.out.println("1. Tambah Antrian");
-        System.out.println("2. Cetak Antrian");
-        System.out.println("3. Hapus Antrian dan Pesan");
-        System.out.println("4. Laporan Pesanan");
+        System.out.println("2. Tambah Antrian Prioritas"); // penambahan
+        System.out.println("3. Cetak Antrian");
+        System.out.println("4. Hapus Antrian dan Pesan");
+        System.out.println("5. Laporan Pesanan");
         System.out.println("0. Keluar");
         System.out.println("=================================");
     }
@@ -73,6 +78,21 @@ public class MainRoyalDelish27 {
         String noHp = input.nextLine();
 
         antrian.tambahAntrian27(nama, noHp);
+    }
+
+    // penambahan
+    static void tambahAntrianPrioritas27() {
+        System.out.println("\n=================================");
+        System.out.println("      TAMBAH ANTRIAN PRIORITAS");
+        System.out.println("=================================");
+
+        System.out.print("Nama Pembeli : ");
+        String nama = input.nextLine();
+
+        System.out.print("No HP        : ");
+        String noHp = input.nextLine();
+
+        antrian.tambahAntrianPrioritas27(nama, noHp);
     }
 
     static void hapusAntrianDanPesan27() {
@@ -111,8 +131,7 @@ public class MainRoyalDelish27 {
                 kode,
                 namaPesanan,
                 harga,
-                pembeli.namaPembeli
-        );
+                pembeli.namaPembeli);
 
         pesanan.tambahPesanan27(dataPesanan);
 
